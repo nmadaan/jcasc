@@ -1,5 +1,6 @@
 plugins: # (1)
   required:
+    github: 1.29.3
     git: 3.9.1
   sites:
   - id: "default"
