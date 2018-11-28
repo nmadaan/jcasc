@@ -2,10 +2,10 @@ plugins: # (1)
   required:
     github: latest
     git: latest
-    #job-dsl: latest
+    job-dsl: latest
     workflow-aggregator: latest
     matrix-auth: latest
-    #configuration-as-code-support: latest
+    configuration-as-code-support: latest
   sites:
   - id: "default"
     url: "https://updates.jenkins.io/update-center.json"
@@ -20,19 +20,19 @@ jenkins:
       #grantedPermissions:
         #- "Overall/Administer:authenticated"
        
-jobs:
-  - script: >
-      pipelineJob('Jenkins-Casc') {
-          definition {
-              cpsScm {
-                  scriptPath 'Jenkins-Casc_Jenkinsfile'
-                  scm {
-                    git {
-                        remote { url 'https://github.com/nmadaan/job-pipeline/' }
-                        branch '*/master'
-                        extensions {}
-                    }
-                  }
-              }
-          }
-      }
+#jobs:
+  #- script: >
+      #pipelineJob('Jenkins-Casc') {
+          #definition {
+              #cpsScm {
+                  #scriptPath 'Jenkins-Casc_Jenkinsfile'
+                  #scm {
+                    #git {
+                        #remote { url 'https://github.com/nmadaan/job-pipeline/' }
+                        #branch '*/master'
+                        #extensions {}
+                    #}
+                  #}
+              #}
+          #}
+      #}
