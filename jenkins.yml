@@ -3,6 +3,7 @@ plugins: # (1)
     github: latest
     git: latest
     job-dsl: latest
+    workflow-aggregator: latest
   sites:
   - id: "default"
     url: "https://updates.jenkins.io/update-center.json"
