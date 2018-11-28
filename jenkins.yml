@@ -2,7 +2,7 @@ plugins: # (1)
   required:
     github: latest
     git: latest
-    job-dsl: latest
+    #job-dsl: latest
     workflow-aggregator: latest
     matrix-auth: latest
     #configuration-as-code-support: latest
