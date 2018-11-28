@@ -11,6 +11,9 @@ plugins: # (1)
 jenkins:
   systemMessage: "Jenkins configured automatically by Jenkins Configuration as Code Plugin\n\n"
   numExecutors: 5
+  securityRealm:
+    local:
+      allowsSignup: true
   authorizationStrategy:
     globalMatrix:
       grantedPermissions:
