@@ -9,7 +9,7 @@ plugins: # (1)
     url: "https://updates.jenkins.io/update-center.json"
 jenkins:
   systemMessage: "Jenkins configured automatically by Jenkins Configuration as Code Plugin\n\n"
-  numExecutors: 3
+  numExecutors: 5
 jobs:
   - script: >
       pipelineJob('Jenkins-Casc') {
