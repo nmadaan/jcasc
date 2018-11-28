@@ -17,7 +17,6 @@ jenkins:
   authorizationStrategy:
     globalMatrix:
       grantedPermissions:
-        - "Overall/Administer:nmadaan"
         - "Overall/Administer:authenticated"
        
 jobs:
