@@ -11,6 +11,12 @@ plugins: # (1)
 jenkins:
   systemMessage: "Jenkins configured automatically by Jenkins Configuration as Code Plugin\n\n"
   numExecutors: 5
+  authorizationStrategy:
+    globalMatrix:
+      grantedPermissions:
+        - "Overall/Administer:nmadaan"
+        - "Overall/Administer:authenticated"
+       
 jobs:
   - script: >
       pipelineJob('Jenkins-Casc') {
