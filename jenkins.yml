@@ -1,10 +1,27 @@
 plugins: # (1)
   required:
-    github: 1.29.3
-    git: 3.9.1
+    github: latest
+    git: latest
+    job-dsl: latest
   sites:
   - id: "default"
     url: "https://updates.jenkins.io/update-center.json"
 jenkins:
   systemMessage: "Jenkins configured automatically by Jenkins Configuration as Code Plugin\n\n"
   numExecutors: 3
+jobs:
+  - script: >
+      pipelineJob('Jenkins-Casc') {
+          definition {
+              cpsScm {
+                  scriptPath 'Jenkins-Casc_Jenkinsfile'
+                  scm {
+                    git {
+                        remote { url 'https://github.com/nmadaan/job-pipeline/' }
+                        branch '*/master'
+                        extensions {}
+                    }
+                  }
+              }
+          }
+      }
