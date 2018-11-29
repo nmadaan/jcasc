@@ -2,10 +2,7 @@ plugins: # (1)
   required:
     github: latest
     git: latest
-    job-dsl: latest
-    workflow-aggregator: latest
     matrix-auth: latest
-    #configuration-as-code-support: latest
   sites:
   - id: "default"
     url: "https://updates.jenkins.io/update-center.json"
@@ -19,8 +16,6 @@ jenkins:
     globalMatrix:
       grantedPermissions:
         - "Overall/Administer:admin"
-        - "Overall/Read:nmadaan"
-       
 jobs:
   - script: >
       pipelineJob('Jenkins-Casc') {
