@@ -17,6 +17,11 @@ jenkins:
       grantedPermissions:
         - "Overall/Administer:admin"
         - "Overall/Read:NMadaan"
+tool:
+  git:
+    installations:
+      - name: Default1
+        home: git
 jobs:
   - script: >
       pipelineJob('Jenkins-Casc') {
