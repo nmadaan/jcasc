@@ -18,7 +18,8 @@ jenkins:
   authorizationStrategy:
     globalMatrix:
       grantedPermissions:
-        - "Job/Read:authenticated"
+        - "Overall/Administer:admin"
+        - "Overall/Read:nmadaan"
        
 jobs:
   - script: >
