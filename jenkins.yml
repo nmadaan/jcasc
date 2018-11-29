@@ -17,7 +17,7 @@ jenkins:
       allowsSignup: true
   authorizationStrategy:
     globalMatrix:
-      grantedPermissions:
+      #grantedPermissions:
         #- "Overall/Administer:authenticated"
        
 jobs:
