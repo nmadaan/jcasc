@@ -15,10 +15,10 @@ jenkins:
   securityRealm:
     local:
       allowsSignup: true
-  #authorizationStrategy:
-    #globalMatrix:
-      #grantedPermissions:
-        #- "Overall/Administer:authenticated"
+  authorizationStrategy:
+    globalMatrix:
+      grantedPermissions:
+        - "Overall/Administer:authenticated"
        
 jobs:
   - script: >
