@@ -20,19 +20,19 @@ jenkins:
       #grantedPermissions:
         #- "Overall/Administer:authenticated"
        
-#jobs:
-  #- script: >
-      #pipelineJob('Jenkins-Casc') {
-          #definition {
-              #cpsScm {
-                  #scriptPath 'Jenkins-Casc_Jenkinsfile'
-                  #scm {
-                    #git {
-                        #remote { url 'https://github.com/nmadaan/job-pipeline/' }
-                        #branch '*/master'
-                        #extensions {}
-                    #}
-                  #}
-              #}
-          #}
-      #}
+jobs:
+  - script: >
+      pipelineJob('Jenkins-Casc') {
+          definition {
+              cpsScm {
+                  scriptPath 'Jenkins-Casc_Jenkinsfile'
+                  scm {
+                    git {
+                        remote { url 'https://github.com/nmadaan/job-pipeline/' }
+                        branch '*/master'
+                        extensions {}
+                    }
+                  }
+              }
+          }
+      }
