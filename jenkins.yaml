@@ -12,18 +12,6 @@ jenkins:
   securityRealm:
     local:
       allowsSignup: true
-  authorizationStrategy:
-    globalMatrix:
-      grantedPermissions:
-        - "Overall/Administer:admin"
-        - "Overall/Read:NMadaan"
-tool:
-  git:
-    installations:
-      - name: Default
-        home: git
-      - name: New
-        home: /usr/bin/git
 jobs:
   - script: >
       pipelineJob('Jenkins-Casc') {
