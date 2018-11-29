@@ -20,8 +20,10 @@ jenkins:
 tool:
   git:
     installations:
-      - name: Default1
+      - name: Default
         home: git
+      - name: New
+        home: /usr/bin/git
 jobs:
   - script: >
       pipelineJob('Jenkins-Casc') {
