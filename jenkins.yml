@@ -5,7 +5,7 @@ plugins: # (1)
     job-dsl: latest
     workflow-aggregator: latest
     matrix-auth: latest
-    configuration-as-code-support: latest
+    #configuration-as-code-support: latest
   sites:
   - id: "default"
     url: "https://updates.jenkins.io/update-center.json"
