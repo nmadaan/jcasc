@@ -20,6 +20,7 @@ jobs:
   - script: >
       pipelineJob('Jenkins-Casc') {
           definition {
+              configure { it / 'triggers' / 'com.cloudbees.jenkins.GitHubPushTrigger' / 'spec' }
               cpsScm {
                   scriptPath 'Jenkins-Casc_Jenkinsfile'
                   scm {
