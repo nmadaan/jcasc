@@ -18,7 +18,7 @@ jenkins:
   authorizationStrategy:
     globalMatrix:
       grantedPermissions:
-        - "Overall/Administer:authenticated"
+        #- "Overall/Administer:authenticated"
        
 jobs:
   - script: >
