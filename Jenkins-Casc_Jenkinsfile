@@ -1,0 +1,20 @@
+properties([pipelineTriggers([githubPush()])])
+node{
+    stage('Checkout_Code') {
+
+				echo 'Checkout code..'
+		git branch: 'master', url: 'https://github.com/nmadaan/jcasc.git'	
+        
+    }
+
+		stage('Build') {
+
+			 sh '''
+				#!/bin/bash
+        #sudo chown -R jenkins /var/lib/jenkins/casc_configs/
+        cp -r $WORKSPACE/*.yml /var/lib/jenkins/casc_configs
+			'''
+
+	   
+   }
+}
