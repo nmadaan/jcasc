@@ -16,6 +16,7 @@ jenkins:
     globalMatrix:
       grantedPermissions:
         - "Overall/Administer:admin"
+        - "Overall/Read:NMadaan"
 jobs:
   - script: >
       pipelineJob('Jenkins-Casc') {
