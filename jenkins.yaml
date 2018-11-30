@@ -12,10 +12,15 @@ jenkins:
   securityRealm:
     local:
       allowsSignup: true
-authorizationStrategy:
-  globalMatrix:
-    grantedPermissions:
-      - "Overall/Administer:admin"
+  authorizationStrategy:
+    globalMatrix:
+      grantedPermissions:
+        - "Overall/Administer:admin"
+tool:
+  git:
+    installations:
+      - name: Default
+        home: git
 jobs:
   - script: >
       pipelineJob('Jenkins-Casc') {
