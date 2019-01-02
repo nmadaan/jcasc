@@ -34,3 +34,18 @@ jobs:
               }
           }
       }
+      pipelineJob('Jenkins-RF-Demo') {
+          definition {
+              configure { it / 'triggers' / 'com.cloudbees.jenkins.GitHubPushTrigger' / 'spec' }
+              cpsScm {
+                  scriptPath 'Jenkinsfile'
+                  scm {
+                    git {
+                        remote { url 'https://github.com/nmadaan/demo-rf.git' }
+                        branch '*/master'
+                        extensions {}
+                    }
+                  }
+              }
+          }
+      }
