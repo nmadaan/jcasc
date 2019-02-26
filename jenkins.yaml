@@ -19,7 +19,7 @@ tool:
         home: git
 jobs:
   - script: >
-      pipelineJob('Jenkins-RF-Demo') {
+      pipelineJob('Jenkins-Springboot-Demo') {
           definition {
               configure { it / 'triggers' / 'com.cloudbees.jenkins.GitHubPushTrigger' / 'spec' }
               cpsScm {
@@ -34,3 +34,4 @@ jobs:
               }
           }
       }
+      queue('Jenkins-Springboot-Demo')
