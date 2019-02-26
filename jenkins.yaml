@@ -26,7 +26,7 @@ jobs:
                   scriptPath 'Jenkinsfile'
                   scm {
                     git {
-                        remote { url 'https://github.com/nmadaan/demo-rf.git' }
+                        remote { url 'https://github.com/nmadaan/jenkins-demo-springboot.git' }
                         branch '*/master'
                         extensions {}
                     }
