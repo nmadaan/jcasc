@@ -25,11 +25,7 @@ jobs:
               cpsScm {
                   scriptPath 'Jenkinsfile'
                   scm {
-                    git {
-                        remote { url 'https://github.com/nmadaan/jenkins-demo-springboot.git' }
-                        branch '*/master'
-                        extensions {}
-                    }
+                    git('https://github.com/nmadaan/jenkins-demo-springboot.git') 
                   }
               }
           }
