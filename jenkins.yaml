@@ -19,13 +19,17 @@ tool:
         home: git
 jobs:
   - script: >
-      pipelineJob('Jenkins-Springboot-Demo') {
+      pipelineJob('Jenkins-Casc') {
           definition {
               configure { it / 'triggers' / 'com.cloudbees.jenkins.GitHubPushTrigger' / 'spec' }
               cpsScm {
                   scriptPath 'Jenkinsfile'
                   scm {
-                    git('https://github.com/nmadaan/jenkins-demo-springboot.git') 
+                    git {
+                        remote { url 'https://github.com/nmadaan/jenkins-demo-springboot' }
+                        branch '*/master'
+                        extensions {}
+                    }
                   }
               }
           }
